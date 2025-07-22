@@ -58,6 +58,7 @@ export class TicketService {
         ticket.handleAt = new Date();
 
         this.workingOnTickets.unshift({ ...ticket });
+        this.onTicketNumberChanged();
 
         return { status: 'ok', ticket };
     }
