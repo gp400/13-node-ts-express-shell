@@ -54,8 +54,6 @@ async function finishedTicket() {
     method: 'PUT'
   }).then( resp => resp.json() )
 
-  console.log({ status, message });
-
   if ( status === 'ok' ){
     workingTicket = null;
     lblCurrentTicket.innerText = 'Nadie';
